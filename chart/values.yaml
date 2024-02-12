@@ -1,0 +1,31 @@
+krateo-frontend:
+  image:
+    repository: ghcr.io/krateoplatformops/krateo-frontend
+    pullPolicy: Always
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: "latest"
+  service:
+    type: NodePort
+    port: 8080
+  env:
+    BFF_API_BASE_URL: http://localhost:8081
+    AUTHN_API_BASE_URL: http://localhost:8082
+
+
+
+krateo-bff:
+  podEnv:
+    - name: KRATEO_BFF_PORT
+      value: "8080"
+    - name: KRATEO_BFF_DEBUG
+      value: "true"
+    - name: AUTHN_NAMESPACE
+      value: "krateo-system"
+
+krateo-gateway:
+  KRATEO_GATEWAY_DEBUG: "true"
+  KRATEO_GATEWAY_PORT: "8443"
+  KRATEO_GATEWAY_CACRT: "/tmp/ca.crt"
+  KRATEO_GATEWAY_DNS_NAMES: "localhost"
+  KRATEO_GATEWAY_IP_ADDRESSES: "127.0.0.1"
+  KRATEO_BFF_SERVER: "http://krateo-bff.krateo-system.svc:8080"
