@@ -26,8 +26,7 @@ This guide provides a step-by-step walkthrough of the bash script used for deplo
 ### Execute script
 
 ```sh
-chmod +x kind.sh
-./kind.sh
+curl -L https://raw.githubusercontent.com/akuity/kargo/main/hack/quickstart/kind.sh | sh
 ```
 
 ### This is what the script does
