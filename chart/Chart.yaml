@@ -25,14 +25,14 @@ appVersion: APP_VERSION
 
 dependencies:
 - name: krateo-frontend
-  version: "2.0.0"
+  version: "2.0.5"
   repository: "https://charts.krateo.io"
 - name: krateo-bff
-  version: "0.10.0"
+  version: "0.12.0"
   repository: "https://charts.krateo.io"
 - name: krateo-gateway
-  version: "0.3.5"
+  version: "0.3.6"
   repository: "https://charts.krateo.io"
 - name: authn-service
-  version: "0.9.4"
+  version: "0.10.0"
   repository: "https://charts.krateo.io"
