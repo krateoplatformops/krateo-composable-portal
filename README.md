@@ -26,8 +26,12 @@ This guide provides a step-by-step walkthrough of the bash script used for deplo
 ### Execute script
 
 ```sh
-curl -L https://raw.githubusercontent.com/akuity/kargo/main/hack/quickstart/kind.sh | sh
+curl -L https://github.com/krateoplatformops/krateo-composable-portal/releases/latest/download/kind.sh | sh
 ```
+
+At the end of this process:
+- The Krateo Portal will be accessible at localhost:30080
+  - The username is 'cyberjoker' and password is '123456'.
 
 ### This is what the script does
 
