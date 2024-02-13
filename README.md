@@ -1,4 +1,4 @@
-# Krateo Gateway Helm Chart
+# Krateo Composable Portal Helm Chart
 
 This is a [Helm Chart](https://helm.sh/docs/topics/charts/) for [Krateo Composable Portal](https://github.com/krateoplatformops/krateo-composable-portal).
 
@@ -30,7 +30,7 @@ curl -L https://github.com/krateoplatformops/krateo-composable-portal/releases/l
 ```
 
 At the end of this process:
-- The Krateo Portal will be accessible at localhost:30080
+- The Krateo Portal will be accessible at [localhost:30080](http://localhost:30080)
   - The username is 'cyberjoker' and password is '123456'.
 
 ### This is what the script does
