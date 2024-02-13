@@ -86,7 +86,7 @@ helm install authn-service authn-service \
 
 helm install krateo-bff krateo-bff \
   --repo https://charts.krateo.io \
-  --version 0.12.0 \
+  --version 0.12.1 \
   --namespace krateo-system \
   --create-namespace \
   --set service.type=NodePort \
@@ -205,42 +205,6 @@ spec:
 apiVersion: widgets.ui.krateo.io/v1alpha1
 kind: CardTemplate
 metadata:
-  name: three-bck
-  namespace: demo-system
-spec:
-  iterator: .api2.items[:3]
-  app:
-    title: \${ .name }
-    content: \${ .body }
-    tags: \${ .email }
-    actions:
-    - name: view
-      endpointRef:
-        name: typicode-endpoint
-        namespace: demo-system
-      path: \${ "/todos/1/comments/" + (.id|tostring) }
-  api:
-  - name: api1
-    path: "/todos/1"
-    endpointRef:
-      name: typicode-endpoint
-      namespace: demo-system
-    verb: GET
-    headers:
-    - 'Accept: application/json'
-  - name: api2
-    dependOn: api1
-    path: \${ "/todos/" + (.api1.id|tostring) +  "/comments" }
-    endpointRef:
-      name: typicode-endpoint
-      namespace: demo-system
-    verb: GET
-    headers:
-    - 'Accept: application/json'
----
-apiVersion: widgets.ui.krateo.io/v1alpha1
-kind: CardTemplate
-metadata:
   name: three
   namespace: demo-system
 spec:
@@ -269,6 +233,8 @@ metadata:
 spec:
   iterator: .api2.items[:10]
   app:
+    icon: \${ "fa-solid fa-" + (.id|tostring)}
+    color: darkBlue
     title: \${ .name }
     content: \${ .body }
     tags: \${ .email }

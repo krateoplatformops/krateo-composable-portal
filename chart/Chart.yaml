@@ -28,7 +28,7 @@ dependencies:
   version: "2.0.5"
   repository: "https://charts.krateo.io"
 - name: krateo-bff
-  version: "0.12.0"
+  version: "0.12.1"
   repository: "https://charts.krateo.io"
 - name: krateo-gateway
   version: "0.3.6"
