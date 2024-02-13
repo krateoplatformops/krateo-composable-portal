@@ -1,4 +1,4 @@
-# Krateo Gateway Helm Chart
+# Krateo Composable Portal Helm Chart
 
 This is a [Helm Chart](https://helm.sh/docs/topics/charts/) for [Krateo Composable Portal](https://github.com/krateoplatformops/krateo-composable-portal).
 
@@ -30,7 +30,7 @@ curl -L https://github.com/krateoplatformops/krateo-composable-portal/releases/l
 ```
 
 At the end of this process:
-- The Krateo Portal will be accessible at localhost:30080
+- The Krateo Portal will be accessible at [localhost:30080](http://localhost:30080)
   - The username is 'cyberjoker' and password is '123456'.
 
 ### This is what the script does
@@ -72,3 +72,14 @@ At the end of this process:
     - Applies a series of Kubernetes manifests to set up namespaces, secrets, roles, role bindings, and custom resources for users, layouts, and widgets. This includes creating a demo-system namespace, configuring user access, and defining UI components and endpoints.
 
 This script sets up a complete Krateo platform environment on a local Kubernetes cluster, ready for development or testing. It meticulously configures networking, security, and user access, providing a comprehensive setup for exploring the capabilities of the Krateo platform.
+
+### Cleaning up
+Congratulations! You've just gotten hands on with Krateo Composable Portal for the first time!
+
+Now let's clean up!
+
+Simply destroy the cluster:
+
+```sh
+kind delete cluster --name krateo-quickstart
+```
